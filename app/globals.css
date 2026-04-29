@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFEAF4;
+  --soft-pink: #FAD0E1;
+  --accent-pink: #FF79B0;
+  --white-cards: #FFFFFF;
+  --text-main: #333333;
+  --lavender: #D9C2FF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-soft-pink: var(--soft-pink);
+  --color-accent-pink: var(--accent-pink);
+  --color-white-cards: var(--white-cards);
+  --color-text-main: var(--text-main);
+  --color-lavender: var(--lavender);
+  
+  --font-fredoka: var(--font-fredoka), "Fredoka", sans-serif;
+  --font-baloo: var(--font-baloo), "Baloo 2", sans-serif;
+  --font-nunito: var(--font-nunito), "Nunito", sans-serif;
+  --font-poppins: var(--font-poppins), "Poppins", sans-serif;
+  --font-quicksand: var(--font-quicksand), "Quicksand", sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-main);
+  font-family: var(--font-poppins);
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+/* Custom scrollbar for some containers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--soft-pink);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-pink);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(255, 121, 176, 0.1);
+}
