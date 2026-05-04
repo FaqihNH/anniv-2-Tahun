@@ -88,10 +88,10 @@ export default function BootPage() {
             </div>
 
             <h1 className="font-fredoka text-3xl font-medium text-text-main text-center mb-2">
-              Hello Baby 💗
+              Hello honey 💗
             </h1>
             <p className="font-poppins text-text-main/80 text-center mb-8 font-medium">
-              Ready to celebrate 2 years with me?
+              Ready to celebrate 2 years with me? 🥺
             </p>
 
             <motion.button

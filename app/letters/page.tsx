@@ -13,31 +13,31 @@ export default function LettersPage() {
       id: 1,
       title: "Open when happy",
       icon: <Sparkles className="text-yellow-500" />,
-      content: "I love seeing you happy. Your smile is literally the most beautiful thing in this world. Keep shining, my love. I'm always cheering for you."
+      content: "I love seeing you happy, honey. Your smile is literally the most beautiful thing in this world. Keep shining, my love. I'm always cheering for you."
     },
     {
       id: 2,
       title: "Open when sad",
       icon: <Frown className="text-blue-400" />,
-      content: "Hey baby... take a deep breath. Whatever it is, we will get through it. I'm right here with you. You are so strong, and I love you so much."
+      content: "Hey honey... take a deep breath. Whatever it is, we will get through it. I'm right here with you. You are so strong, and I love you so much."
     },
     {
       id: 3,
       title: "Open when angry",
       icon: <Flame className="text-red-500" />,
-      content: "I know you're mad right now, and maybe it's at me. But please remember that my love for you never changes, even when we fight. Let's talk it out when you're ready."
+      content: "I know you're mad right now, and maybe it's at me. But please remember that my love for you never changes, even when we fight. Let's talk it out when you're ready, honey."
     },
     {
       id: 4,
       title: "Open when you miss me",
       icon: <HeartHandshake className="text-accent-pink" />,
-      content: "I miss you too. So much. Close your eyes and imagine me hugging you really tight right now. I can't wait to see you again."
+      content: "I miss you too, honey. So much. Close your eyes and imagine me hugging you really tight right now. I can't wait to see you again."
     },
     {
       id: 5,
       title: "Open today",
       icon: <Mail className="text-purple-500" />,
-      content: "Happy 2 Years, baby! Thank you for being my favorite person. Every single day with you is a blessing. Let's make more beautiful memories."
+      content: "Happy 2 Years, honey! Thank you for being my favorite person. Every single day with you is a blessing. Let's make more beautiful memories."
     }
   ];
 

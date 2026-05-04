@@ -11,12 +11,12 @@ export default function MemoriesPage() {
   const { scrollYProgress } = useScroll({ container: containerRef });
 
   const timelineData = [
-    { title: "First Chat", date: "Where it all started", icon: <MessageCircleHeart />, text: "That simple hello that changed my entire life. I still smile reading those old texts." },
-    { title: "First Meet", date: "Nervous but excited", icon: <Coffee />, text: "My heart was beating so fast. You looked even more beautiful than I imagined." },
-    { title: "First Date", date: "Sparks flying", icon: <Flower2 />, text: "Everything felt so natural. I knew right then I wanted to keep going on dates with you." },
-    { title: "First Fight + Made Up", date: "Growing stronger", icon: <HeartHandshake />, text: "We learned how to communicate. Even when mad, I still loved you." },
-    { title: "1 Year Together", date: "A milestone", icon: <Infinity />, text: "365 days of you being my favorite person. It flew by so fast because I was happy." },
-    { title: "Today = 2 Years", date: "May 5th", icon: <Stars />, text: "Still deeply in love. Still choosing you. Here's to forever, my baby." },
+    { title: "First Chat", date: "Where it all started", icon: <MessageCircleHeart />, text: "That simple hello that changed my entire life. I still smile reading those old texts, honey." },
+    { title: "First Meet", date: "Nervous but excited", icon: <Coffee />, text: "My heart was beating so fast. You looked even more beautiful than I imagined, honey." },
+    { title: "First Date", date: "Sparks flying", icon: <Flower2 />, text: "Everything felt so natural. I knew right then I wanted to keep going on dates with you, honey." },
+    { title: "First Fight + Made Up", date: "Growing stronger", icon: <HeartHandshake />, text: "We learned how to communicate. Even when mad, I still loved you so much, honey." },
+    { title: "1 Year Together", date: "A milestone", icon: <Infinity />, text: "365 days of you being my favorite person. It flew by so fast because I was so happy with you, honey." },
+    { title: "Today = 2 Years", date: "May 5th", icon: <Stars />, text: "Still deeply in love. Still choosing you. Here's to forever, my honey." },
   ];
 
   return (

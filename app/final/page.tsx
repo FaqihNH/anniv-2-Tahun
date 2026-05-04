@@ -2,11 +2,14 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Heart } from "lucide-react";
+import { Heart, ArrowLeft, Home } from "lucide-react";
 import SplitHeading from "@/components/SplitHeading";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function FinalPage() {
   const [exploded, setExploded] = useState(false);
+  const router = useRouter();
 
   const handleExplode = () => {
     setExploded(true);
@@ -14,6 +17,35 @@ export default function FinalPage() {
 
   return (
     <main className="min-h-screen bg-text-main flex items-center justify-center relative overflow-hidden">
+      {/* Back Navigation */}
+      <motion.div
+        initial={{ x: -60, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ type: "spring", damping: 20, stiffness: 200, delay: 0.5 }}
+        className="fixed top-6 left-6 z-50 flex items-center gap-2"
+      >
+        <motion.button
+          onClick={() => router.back()}
+          whileHover={{ scale: 1.1, x: -3 }}
+          whileTap={{ scale: 0.9 }}
+          className="group flex items-center gap-2 bg-white/10 backdrop-blur-xl border border-white/20 px-4 py-2.5 rounded-full shadow-lg hover:bg-white/20 transition-all"
+        >
+          <motion.div animate={{ x: [0, -3, 0] }} transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}>
+            <ArrowLeft size={16} className="text-white/80" />
+          </motion.div>
+          <span className="font-quicksand text-sm font-bold text-white/80">Back</span>
+        </motion.button>
+        <Link href="/home">
+          <motion.button
+            whileHover={{ scale: 1.1, y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            className="flex items-center gap-1.5 bg-accent-pink/20 backdrop-blur-xl border border-accent-pink/30 px-3 py-2.5 rounded-full shadow-md hover:bg-accent-pink/30 transition-all"
+          >
+            <Home size={16} className="text-accent-pink" />
+          </motion.button>
+        </Link>
+      </motion.div>
+
       {/* Dark/Soft particle background */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         {Array.from({ length: 30 }).map((_, i) => (
@@ -61,7 +93,7 @@ export default function FinalPage() {
               className="text-xl md:text-2xl font-quicksand text-white/90 leading-relaxed mb-6 font-medium"
             >
               Thank you for being<br />
-              my favorite person<br />
+              my favorite person, honey,<br />
               for 2 beautiful years.
             </motion.p>
 
@@ -120,8 +152,8 @@ export default function FinalPage() {
                 rotate: 0 
               }}
               animate={{ 
-                x: (Math.random() - 0.5) * window.innerWidth * 1.5, 
-                y: (Math.random() - 0.5) * window.innerHeight * 1.5,
+                x: (Math.random() - 0.5) * (typeof window !== "undefined" ? window.innerWidth : 1000) * 1.5, 
+                y: (Math.random() - 0.5) * (typeof window !== "undefined" ? window.innerHeight : 800) * 1.5,
                 scale: Math.random() * 2 + 0.5,
                 rotate: Math.random() * 360,
                 opacity: [1, 1, 0]
